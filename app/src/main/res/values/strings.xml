@@ -4,6 +4,7 @@
     <!--AuthActivity-->
     <string name="enter_name">Введите имя:</string>
     <string name="enter_button">ВОЙТИ</string>
+    <string name="exit_button">ЗАКРЫТЬ</string>
     <string name="edit_text_empty_error">Вы не заполнили поле с именем</string>
     <string name="edit_text_max_length_error">Вы превысили допустимое количество символов</string>
     <string name="snackbar_ok">OK</string>
