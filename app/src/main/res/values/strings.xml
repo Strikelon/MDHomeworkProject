@@ -10,7 +10,9 @@
     <string name="snackbar_ok">OK</string>
 
     <!--NavigationDrawer Menu-->
-    <string name="nav_settings">Настройки</string>
+    <string name="nav_fruits">Фрукты</string>
+    <string name="nav_vegetables">Овощи</string>
+    <string name="nav_nature">Природа</string>
     <string name="nav_open_drawer">nav_open_drawer</string>
     <string name="nav_close_drawer">nav_close_drawer</string>
 </resources>

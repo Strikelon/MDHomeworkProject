@@ -2,9 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_settings"
-        android:title="@string/nav_settings"
-        android:icon="@drawable/ic_action_settings"
+        android:id="@+id/nav_fruits"
+        android:title="@string/nav_fruits"
+        />
+
+    <item
+        android:id="@+id/nav_vegetables"
+        android:title="@string/nav_vegetables"
+        />
+
+    <item
+        android:id="@+id/nav_nature"
+        android:title="@string/nav_nature"
         />
 
 </menu>
