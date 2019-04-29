@@ -10,59 +10,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
-public class MainNavigationActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-
-    private DrawerLayout drawerLayout;
-    private NavigationView navigationView;
+public class MainNavigationActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_navigation);
+        setContentView(R.layout.content_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        initViews();
-
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
-                drawerLayout,
-                toolbar,
-                R.string.nav_open_drawer,
-                R.string.nav_close_drawer);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationView.setNavigationItemSelectedListener(this);
     }
 
-    private void initViews(){
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        int id = item.getItemId();
-
-        switch (id) {
-            case R.id.nav_settings:
-                break;
-            default:
-                break;
-        }
-
-        drawerLayout.closeDrawer(GravityCompat.START);
-        return true;
-    }
 
 }

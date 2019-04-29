@@ -16,14 +16,12 @@ public class AuthActivity extends AppCompatActivity {
     private View coordinatorLayout;
     private EditText editText;
     private Button enterButton;
+    private Button exitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         initViews();
 
@@ -43,12 +41,20 @@ public class AuthActivity extends AppCompatActivity {
 
             }
         });
+
+        exitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void initViews(){
         coordinatorLayout = findViewById(R.id.coordinator_layout);
         editText = findViewById(R.id.editText);
         enterButton = findViewById(R.id.enter_button);
+        exitButton = findViewById(R.id.exit_button);
     }
 
     private void showSnackbar(int message){
