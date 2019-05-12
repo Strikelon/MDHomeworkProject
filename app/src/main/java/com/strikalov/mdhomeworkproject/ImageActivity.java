@@ -7,6 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ImageActivity extends AppCompatActivity {
 
@@ -19,6 +20,7 @@ public class ImageActivity extends AppCompatActivity {
     }
 
     private ImageView imageView;
+    private TextView textDescription;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +32,7 @@ public class ImageActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         imageView = findViewById(R.id.image_view);
+        textDescription = findViewById(R.id.text_description);
 
         if(getIntent() != null){
 
@@ -42,12 +45,15 @@ public class ImageActivity extends AppCompatActivity {
                 switch (pictureName){
                     case "nav_fruits":
                         imageView.setImageResource(R.drawable.fruits);
+                        textDescription.setText(R.string.fruits_description);
                         break;
                     case "nav_vegetables":
                         imageView.setImageResource(R.drawable.vegetables);
+                        textDescription.setText(R.string.vegetables_description);
                         break;
                     case "nav_nature":
                         imageView.setImageResource(R.drawable.nature);
+                        textDescription.setText(R.string.nature_description);
                         break;
                     default:
                         break;
