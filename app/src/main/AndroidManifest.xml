@@ -20,6 +20,9 @@
         <activity android:name=".ImageActivity"
             android:parentActivityName=".MainNavigationActivity">
             </activity>
+        <activity android:name=".TabActivity"
+            android:parentActivityName=".MainNavigationActivity">
+        </activity>
     </application>
 
 </manifest>
