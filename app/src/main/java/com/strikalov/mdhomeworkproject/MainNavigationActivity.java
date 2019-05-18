@@ -61,7 +61,7 @@ public class MainNavigationActivity extends AppCompatActivity
                 intent = ImageActivity.newIntent(this, "nav_vegetables");
                 break;
             case R.id.nav_nature:
-                intent = ImageActivity.newIntent(this, "nav_nature");
+                intent = TabActivity.newIntent(this);
                 break;
             default:
                 break;
