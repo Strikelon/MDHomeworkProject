@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways|snap"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <Button
+            android:id="@+id/button_theme1"
+            style="@style/ButtonsTheme"
+            android:background="@color/colorPrimary1"
+            android:text="@string/button_theme_1"/>
+
+        <Button
+            android:id="@+id/button_theme2"
+            style="@style/ButtonsTheme"
+            android:background="@color/colorPrimary2"
+            android:text="@string/button_theme_2"/>
+
+        <Button
+            android:id="@+id/button_theme3"
+            style="@style/ButtonsTheme"
+            android:background="@color/colorPrimary3"
+            android:text="@string/button_theme_3"/>
+
+        <Button
+            android:id="@+id/button_theme4"
+            style="@style/ButtonsTheme"
+            android:background="@color/colorPrimary4"
+            android:text="@string/button_theme_4"/>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

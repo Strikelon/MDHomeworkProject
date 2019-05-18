@@ -16,4 +16,12 @@
         android:title="@string/nav_nature"
         />
 
+    <group
+        android:id="@+id/settings">
+        <item
+            android:id="@+id/nav_settings"
+            android:title="@string/nav_settings"
+            />
+    </group>
+
 </menu>
