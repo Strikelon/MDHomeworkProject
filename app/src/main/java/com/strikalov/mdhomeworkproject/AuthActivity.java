@@ -1,6 +1,8 @@
 package com.strikalov.mdhomeworkproject;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,6 +22,9 @@ public class AuthActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        int theme = sp.getInt(Constants.THEME, R.style.AppTheme);
+        setTheme(theme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_auth);
 
@@ -71,5 +76,6 @@ public class AuthActivity extends AppCompatActivity {
     private void startMainNavigationActivity(){
         Intent intent = new Intent(this, MainNavigationActivity.class);
         startActivity(intent);
+        finish();
     }
 }

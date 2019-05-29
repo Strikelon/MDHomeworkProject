@@ -15,6 +15,13 @@
     <string name="nav_nature">Природа</string>
     <string name="nav_open_drawer">nav_open_drawer</string>
     <string name="nav_close_drawer">nav_close_drawer</string>
+    <string name="nav_settings">Настройки</string>
+    
+    <!--SettingsActivity-->
+    <string name="button_theme_1">Тема №1</string>
+    <string name="button_theme_2">Тема №2</string>
+    <string name="button_theme_3">Тема №3</string>
+    <string name="button_theme_4">Тема №4</string>
 
     <!--ImageActivity-->
     <string name="fruit1">

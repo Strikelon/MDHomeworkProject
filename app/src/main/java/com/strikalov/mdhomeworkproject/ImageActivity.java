@@ -2,7 +2,9 @@ package com.strikalov.mdhomeworkproject;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -30,6 +32,9 @@ public class ImageActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(this);
+        int theme = sp.getInt(Constants.THEME, R.style.AppTheme);
+        setTheme(theme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_image);
 
